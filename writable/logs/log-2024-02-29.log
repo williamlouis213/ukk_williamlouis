@@ -1,0 +1,24 @@
+ERROR - 2024-02-29 11:07:53 --> Table 'gallery.comment' doesn't exist
+CRITICAL - 2024-02-29 11:07:53 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\galeri\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\galeri\app\Models\CommentModel.php(17): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\galeri\app\Controllers\dashboard.php(97): App\Models\CommentModel->getCommentsByPost('1')
+#3 C:\xampp\htdocs\galeri\system\CodeIgniter.php(832): App\Controllers\dashboard->commentForm('1')
+#4 C:\xampp\htdocs\galeri\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard))
+#5 C:\xampp\htdocs\galeri\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\galeri\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\galeri\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-02-29 18:31:04 --> Error connecting to the database: Unknown database 'gallery'
+CRITICAL - 2024-02-29 18:31:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gallery'
+#0 C:\xampp\htdocs\willgram\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\willgram\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\willgram\app\Models\M_login.php(18): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\willgram\app\Controllers\Home.php(51): App\Models\M_login->getLoginWithPassword('user', 'a', 'a')
+#4 C:\xampp\htdocs\willgram\system\CodeIgniter.php(832): App\Controllers\Home->aksi_login()
+#5 C:\xampp\htdocs\willgram\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\willgram\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\willgram\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\willgram\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
